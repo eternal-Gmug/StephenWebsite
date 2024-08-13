@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.scut{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('华工校徽.svg');
+    background-repeat: no-repeat;
+}
+
+.wrapper{
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    display:flex;
+    height: 100%;
+    width: 100%;
+    justify-content:center;
+    place-items: center;
+    background: linear-gradient(0deg,#ffffff 0%,#d7e1ec 90%);
+}
+
+.wrapper .button{
+    display:inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 0 5px;
+    float: left;
+    overflow:hidden;
+    background:#ffffff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover{
+    width: 450px;
+}
+
+.wrapper .button .icon{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    font-size: 45px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 100px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon{
+    background:#e06a6a;
+}
+.wrapper .button:nth-child(2):hover .icon{
+    background:#51b641;
+}
+.wrapper .button:nth-child(3):hover .icon{
+    background:#45b9b7;
+}
+.wrapper .button:nth-child(4):hover .icon{
+    background:#b04bc1;
+}
+
+.wrapper .button:hover .icon i{
+    color: #ffffff;
+}
+
+.wrapper .button span{
+      font-size: 35px;
+      line-height: 100px;
+      font-weight: 500;
+      margin-left: 10px;
+}
+
+.wrapper .button:nth-child(1):hover span{
+    color:#e06a6a;
+}
+.wrapper .button:nth-child(2):hover span{
+    color:#51b641;
+}
+.wrapper .button:nth-child(3):hover span{
+    color:#45b9b7;
+}
+.wrapper .button:nth-child(4):hover span{
+    color:#b04bc1;
+}
+

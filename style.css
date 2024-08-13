@@ -1,0 +1,118 @@
+h2
+{
+  display: flex;
+  background-color: rgb(143, 136, 136);
+  font-size: 15vb;
+  font-family:'Times New Roman', Times, serif;
+  justify-content: center;
+  align-items: center;
+}
+h2 span
+{
+    animation: animate 3s linear infinite;
+    animation-delay:calc(0.1s*var(--i));
+}
+@keyframes animate {
+    0%
+    {
+        color:aquamarine;
+        filter: blur(2px) hue-rotate(0deg);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 10px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff,
+    }
+    30%,70%
+    {
+        color:aquamarine;
+        filter: blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 10px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+    }
+    100%
+    {
+        color:transparent;
+        box-shadow: none;
+        filter: blur(2px) hue-rotate(0deg);
+    }
+}
+.heart{
+    height: 50px;
+    width: 50px;
+    background:#d9708e;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 80px #d9708e;
+    animation: heart 0.6s linear infinite;
+}
+@keyframes heart {
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    70%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+.heart::before{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background:#d9708e;
+    top: -50%;
+    border-radius: 35px;
+    box-shadow: -10px -10px 80px #d9708e;
+}
+.heart::after{
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background:#d9708e;
+    right: -50%;
+    border-radius: 35px;
+    box-shadow: 10px 10px 80px #d9708e;
+}
+
+.road{
+    border-bottom: 7px dashed grey;
+}
+
+.runner{
+    background: url("mario-jump.png");
+    width: 72px;
+    height: 140px;
+    animation: walk 1s steps(5) infinite,
+               forward 5s linear infinite;
+}
+
+@keyframes walk {
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: 400px;
+    }
+}
+
+@keyframes forward {
+    0%{
+       transform: translateX(-100px); 
+    }
+    100%{
+        transform: translateX(1600px);
+    }
+}
